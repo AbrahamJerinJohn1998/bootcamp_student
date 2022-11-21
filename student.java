@@ -51,6 +51,21 @@ public class student {
         ArrayList<student> arr = new ArrayList<student>();
         System.out.println("Enter 1-Add student details\n 2-View student details\n3-Search student details\n4-Delete student details\n5-Exit\nEnter your choice: ");
         choice = sc.nextInt();
+        switch (choice) {
+            case 1:
+                System.out.println("Enter Number of Students: ");
+                n = sc.nextInt();
+                for (i = 0; i < n; i++) {
+                    System.out.println("Enter the following details \n Admission number: \nRoll number: \nName: \nCollege: ");
+                    admnno = sc.next();
+                    rollno = sc.nextInt();
+                    name = sc.next();
+                    college = sc.next();
+                }
+                student obj=new student(Integer rollno, String admnno, String name, String college);
+                arr.add(obj);
+                break;
 
+        }
     }
 }
