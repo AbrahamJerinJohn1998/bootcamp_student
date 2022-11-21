@@ -62,6 +62,9 @@ public class student {
                     name = sc.next();
                     college = sc.next();
                 }
+                student obj=new student(Integer rollno, String admnno, String name, String college);
+                arr.add(obj);
+                break;
 
         }
     }
