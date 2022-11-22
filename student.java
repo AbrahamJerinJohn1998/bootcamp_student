@@ -75,6 +75,23 @@ public class student {
                     System.out.println(stud.college);
                 }
                 break;
+            case 3:
+                System.out.println("Enter student admission no: ");
+                String studadno=sc.next();
+                for (student stud : arr)
+                {
+                    if (studadno==stud.admnno)
+                    {
+                        System.out.println("Details of student are:");
+                        System.out.println(stud.admnno);
+                        System.out.println(stud.rollno);
+                        System.out.println(stud.name);
+                        System.out.println(stud.college);
+                        break;;
+                    }
+                    else System.out.println("Student details not found");
+                }
+                break;;
 
         }
     }
