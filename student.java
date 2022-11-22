@@ -2,8 +2,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class student {
-    Integer rollno;
-    String admnno,name,college;
+    int rollno;
+    String admnno;
+    String name;
+    String college;
+
 
     public student(Integer rollno, String admnno, String name, String college) {
         this.rollno = rollno;
@@ -45,8 +48,10 @@ public class student {
     }
 
     public static void main(String[] args) {
-        int rollno, choice, n, i;
-        String admnno, name, college;
+        int rolno = 1,choice, n, i;
+        String adnno=new String();
+        String nam=new String();
+        String colleg=new String();
         Scanner sc = new Scanner(System.in);
         ArrayList<student> arr = new ArrayList<student>();
         System.out.println("Enter 1-Add student details\n 2-View student details\n3-Search student details\n4-Delete student details\n5-Exit\nEnter your choice: ");
@@ -57,28 +62,33 @@ public class student {
                 n = sc.nextInt();
                 for (i = 0; i < n; i++) {
                     System.out.println("Enter the following details \n Admission number: \nRoll number: \nName: \nCollege: ");
-                    admnno = sc.next();
-                    rollno = sc.nextInt();
-                    name = sc.next();
-                    college = sc.next();
+                    Scanner sc1= new Scanner(System.in);
+                    adnno = sc1.next();
+                    Scanner sc2= new Scanner(System.in);
+                    rolno = sc2.nextInt();
+                    Scanner sc3= new Scanner(System.in);
+                    nam= sc3.next();
+                    Scanner sc4= new Scanner(System.in);
+                    colleg = sc4.next();
                 }
-                student obj=new student(Integer rollno, String admnno, String name, String college);
+                student obj=new student(rolno,adnno,nam,colleg);
                 arr.add(obj);
                 break;
             case 2:
                 System.out.println("Displasy student details:");
-                for (student stud : arr)
-                {
+                for (student stud:arr
+                     ) {
                     System.out.println(stud.admnno);
                     System.out.println(stud.rollno);
                     System.out.println(stud.name);
                     System.out.println(stud.college);
+
                 }
                 break;
             case 3:
                 System.out.println("Enter student admission no: ");
                 String studadno=sc.next();
-                for (student stud : arr)
+                for (student stud:arr)
                 {
                     if (studadno==stud.admnno)
                     {
@@ -87,15 +97,15 @@ public class student {
                         System.out.println(stud.rollno);
                         System.out.println(stud.name);
                         System.out.println(stud.college);
-                        break;;
+                        break;
                     }
                     else System.out.println("Student details not found");
                 }
-                break;;
+                break;
             case 4:
                 System.out.println("Enter student admission no: ");
                 studadno =sc.next();
-                for (student s1 : arr)
+                for (student s1:arr)
                 {
                     if (studadno== s1.getAdmnno())
                     {
@@ -104,6 +114,8 @@ public class student {
                     }
                 }
             case 5:System.exit(0);
+            default:
+                System.out.println("Invalid choice");
         }
     }
 }
