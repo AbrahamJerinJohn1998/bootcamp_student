@@ -92,7 +92,17 @@ public class student {
                     else System.out.println("Student details not found");
                 }
                 break;;
-
+            case 4:
+                System.out.println("Enter student admission no: ");
+                studadno =sc.next();
+                for (student s1 : arr)
+                {
+                    if (studadno== s1.getAdmnno())
+                    {
+                        arr.remove(s11);
+                        break;
+                    }
+                }
         }
     }
 }
