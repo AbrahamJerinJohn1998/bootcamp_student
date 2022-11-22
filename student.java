@@ -65,6 +65,16 @@ public class student {
                 student obj=new student(Integer rollno, String admnno, String name, String college);
                 arr.add(obj);
                 break;
+            case 2:
+                System.out.println("Displasy student details:");
+                for (student stud : arr)
+                {
+                    System.out.println(stud.admnno);
+                    System.out.println(stud.rollno);
+                    System.out.println(stud.name);
+                    System.out.println(stud.college);
+                }
+                break;
 
         }
     }
