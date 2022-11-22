@@ -99,10 +99,11 @@ public class student {
                 {
                     if (studadno== s1.getAdmnno())
                     {
-                        arr.remove(s11);
+                        arr.remove(s1);
                         break;
                     }
                 }
+            case 5:System.exit(0);
         }
     }
 }
